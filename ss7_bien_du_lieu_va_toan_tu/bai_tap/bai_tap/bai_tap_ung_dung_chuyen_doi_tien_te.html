@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đổi tiền</title>
+</head>
+<body>
+<body>
+<table border="0">
+  <tr>
+    <th>Amount</th>
+    <th width="150">From Currency</th>
+    <th width="150">To Currency</th>
+    <th></th>
+  </tr>
+  <tr align="center">
+    <td><input type="number" id="tien"></td>
+    <td>
+      <select id="a">
+        <option value="VND">VND</option>
+        <option value="USD">USD</option>
+      </select>
+    </td>
+    <td>
+      <select id="b">
+        <option value="VND">VND</option>
+        <option value="USD">USD</option>
+      </select>
+    </td>
+    <td>
+      <button type="button" onclick="cl()">conver</button>
+    </td>
+  </tr>
+</table>
+<h4 id="kq"></h4>
+</body>
+<script>
+  function cl() {
+    let tien = parseInt(document.getElementById("tien").value);
+    console.log(typeof tien);
+    let a = document.getElementById("a").value;
+    let b = document.getElementById("b").value;
+    let kq;
+
+    if ( a == "USD" && b == "VND") {
+      kq = "Result: " + (tien * 23000) + "VNĐ";
+    }
+    else if (a =="VND"&& b == "USD"){
+      kq = "Result: "+ (tien / 23000) + " $";
+    }
+    else if (a == "VND"&& b == "VND") {
+      kq = "Result: " + tien + "VNĐ";
+    } else {
+      kq = "Result: " + tien + " $";
+    }
+    document.getElementById("kq").innerHTML=kq;
+  }
+</script>
+</body>
+</html>

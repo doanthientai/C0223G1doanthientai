@@ -1,0 +1,45 @@
+
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>điểm TB</title>
+</head>
+<body>
+<table cellpadding="5">
+    <tr>
+        <td><label>Điểm vật lý</label></td>
+        <td><input type="number" id="vl"></td>
+    </tr>
+    <tr>
+        <td><label>Điểm hóa học</label></td>
+        <td><input type="number" id="hh"></td>
+    </tr>
+    <tr>
+        <td><label>Điểm sinh hoc</label></td>
+        <td><input type="number" id="sh"></td>
+    </tr>
+</table>
+<button type="button" onclick="cl()">tính điểm TB</button>
+<br><br>
+<label>Điểm trung bình là : </label> <b><label style="font-size: 20px;color: red" id="TB"></label></b>
+<script>
+    //biến đang ở string đưa về number
+    // typeof để kt kiểu dữ liệu
+    // parseInt ép kiểu dữ liệu về number
+    function cl() {
+        let vl = parseInt(document.getElementById("vl").value);
+        console.log(typeof vl);
+        let hh = parseInt(document.getElementById("hh").value);
+        console.log(typeof hh);
+        let sh = parseInt(document.getElementById("sh").value);
+        console.log(typeof sh);
+        let tb;
+        tb = (vl+hh+sh)/3
+        console.log(typeof tb);
+        document.getElementById("TB").innerHTML=tb;
+    }
+</script>
+</body>
+</html>
