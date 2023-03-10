@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>giải phương trình bậc 1</title>
+</head>
+<body>
+<h2>giải phương trình bậc 1</h2>
+<b>nhập phương trình</b><br>
+<b><input id="a" type="number" placeholder="a" style="width: 30px">
+   x+<input id="b" type="number" placeholder="b" style="width: 30px">=0</b><br><br>
+<button onclick="cl()">tính</button><br>
+<h4 id="kq"></h4>
+</body>
+<script>
+    function cl() {
+        let soa = document.getElementById("a").value * 1;
+        let sob = document.getElementById("b").value * 1;
+        let nghiem = document.getElementById("ketqua");
+        if (soa == 0) {
+            nghiem.innerHTML = "phương trình vô nghiệm";
+        } else {
+            nghiem.innerHTML = "x = " + (-sob / soa);
+        }
+    }
+
+</script>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>xếp học lực</title>
+</head>
+<body>
+<table border="1" cellspacing="0">
+    <tr>
+        <th></th>
+        <th>điểm giữa kỳ</th>
+        <th>điểm cuôi kỳ</th>
+        <th>điểm tổng kết</th>
+        <th width="120">xếp loại</th>
+    </tr>
+    <tr>
+        <th>điểm toán</th>
+        <td><input type="number" id="dToan1" placeholder="nhâp điểm"></td>
+        <td><input type="number" id="dToan2" placeholder="nhâp điểm"></td>
+        <td id="tongKetToan"></td>
+        <td rowspan="3" id="kq"></td>
+    </tr>
+    <tr>
+        <th>điểm lý</th>
+        <td><input type="number" id="dLy1" placeholder="nhâp điểm"></td>
+        <td><input type="number" id="dLy2" placeholder="nhâp điểm"></td>
+        <td id="tongKetLy"></td>
+    </tr>
+    <tr>
+        <th>điểm Hoa</th>
+        <td><input type="number" id="dHoa1" placeholder="nhâp điểm"></td>
+        <td><input type="number" id="dHoa2" placeholder="nhâp điểm"></td>
+        <td id ="tongKetHoa"></td>
+    </tr>
+</table>
+<br>
+<button onclick="cl()">kiểm tra</button>
+</body>
+<script>
+    function cl() {
+        let ketQua = document.getElementById("kq");
+        let toan1 = document.getElementById("dToan1").value * 1;
+        let ly1 = document.getElementById("dLy1").value * 1;
+        let hoa1 = document.getElementById("dHoa1").value * 1;
+        let toan2 = document.getElementById("dToan2").value * 1;
+        let ly2 = document.getElementById("dLy2").value * 1;
+        let hoa2 = document.getElementById("dHoa2").value * 1;
+        let diemTongKetToan = (toan1 + toan2) / 2;
+        document.getElementById("tongKetToan").innerHTML = diemTongKetToan;
+        let diemTongKetLy = (ly1 + ly2) / 2;
+        document.getElementById("tongKetLy").innerHTML = diemTongKetLy;
+        let diemTongKetHoa = (hoa1 + hoa2) / 2;
+        document.getElementById("tongKetHoa").innerHTML = diemTongKetToan;
+        if (diemTongKetToan >= 8.5 && diemTongKetLy >= 8.5 && diemTongKetHoa >= 8.5) {
+            ketQua.innerHTML = "giỏi";
+        } else if (diemTongKetToan >= 6.5 && diemTongKetLy >= 6.5 && diemTongKetHoa >= 6.5)
+        {
+            ketQua.innerHTML = "khá";
+        } else if (diemTongKetToan >= 5 && diemTongKetLy >= 5 && diemTongKetHoa >= 5)
+        {
+            ketQua.innerHTML = "trung bình";
+        } else {
+            ketQua.innerHTML = "dưới trung bình";
+        }
+
+
+    }
+</script>
+</html>
+y

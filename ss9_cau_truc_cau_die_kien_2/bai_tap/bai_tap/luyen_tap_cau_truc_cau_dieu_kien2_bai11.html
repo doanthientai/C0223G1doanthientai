@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính thuế</title>
+</head>
+<body>
+<h3>TÍNH THUẾ THU NHẬP CÁ NHÂN</h3>
+<table border="1" cellspacing="0">
+    <tr>
+        <th width="150">thu nhập E6VNĐ (triệu)</th>
+        <th width="200">thuế thu nhập</th>
+    </tr>
+    <tr>
+        <td align="center"><15</td>
+        <td align="center">0%</td>
+    </tr>
+    <tr>
+        <td align="center"><30</td>
+        <td align="center">5$</td>
+    </tr>
+    <tr>
+        <td align="center"><50</td>
+        <td align="center">10%</td>
+    </tr>
+    <tr>
+        <td align="center">>=50</td>
+        <td align="center">15%</td>
+    </tr>
+</table>
+<p>nhập mức thu nhập</p>
+<input type="number" id="tien"><label>triệu VNĐ</label><br><br>
+<button type="button" onclick="kichChuot()">tính tiền điện</button>
+<p id="ketqua"></p>
+</body>
+<script>
+    function kichChuot() {
+        let tien = document.getElementById("tien").value * 1;
+        let ketQua = document.getElementById("ketqua");
+        if (tien >= 50) {
+            ketQua.innerHTML = "tiền phải trả là: "+tien * 0.15 + "triệu VNĐ";
+        } else if (tien >= 30) {
+            ketQua.innerHTML = "tiền phải trả là: "+tien * 0.1 + "triệu VNĐ";
+        } else if (tien  >= 15) {
+            ketQua.innerHTML = "tiền phải trả là: "+tien * 0.05 + "triệu VNĐ";
+        } else {
+            ketQua.innerHTML = "tiền phải trả là: 0 VNĐ";
+        }
+    }
+</script>
+</html>

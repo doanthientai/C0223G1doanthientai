@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="số">
+<button onclick ="c1()" > số sánh với 0>  </button><br><br>
+<p id="kết quả" ></p>
+</body>
+<script>
+    function c1() {
+    let so = document.getElementById("so").value*1;
+    let ketQua= document.getElementById("ketqua");
+    if (so>0) {
+    ketQua.innerHTML = so + " lon hơn 0"
+    }else if ( so<0 ) {
+        ketQua.innerHTML = so + "nho hơn 0"
+    }else
+        ketQua.innerHTML = "là số 0" }
+
+</script>
+</body>
+</html>

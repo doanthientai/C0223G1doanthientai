@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính giá điện</title>
+</head>
+<body>
+<h3>TÍNH GIÁ ĐIỆN</h3>
+<table border="1" cellspacing="0">
+    <tr>
+        <th width ="150">kWh</th>
+        <th width ="200">đơn giá VNĐ/kWh</th>
+    </tr>
+    <tr>
+        <td align ="center"><50</td>
+        <td align ="center">3000</td>
+    </tr>
+    <tr>
+        <td align ="center"><100</td>
+        <td align ="center">3500</td>
+    </tr>
+    <tr>
+        <td align ="center"><200</td>
+        <td align ="center">4000</td>
+    </tr>
+    <tr>
+        <td align ="center">>=200</td>
+        <td align ="center">4500</td>
+    </tr>
+</table>
+<p>nhập mức tiêu thụ</p>
+<input type="number" id="dien"><label>kWh</label><br><br>
+<button type="button" onclick="kichChuot()">tính tiền điện</button>
+<p id="ketqua"></p>
+</body>
+<script>
+    function kichChuot() {
+        let chuDien = document.getElementById("dien").value * 1;
+        let ketQua = document.getElementById("ketqua");
+        if (chuDien >= 200) {
+            ketQua.innerHTML = "tiền phải trả là: "+chuDien * 4500 + "VNĐ";
+        } else if (chuDien >= 100) {
+            ketQua.innerHTML = "tiền phải trả là: "+chuDien * 4000 + "VNĐ";
+        } else if (chuDien >= 50) {
+            ketQua.innerHTML = "tiền phải trả là: "+chuDien * 3500 + "VNĐ";
+        } else {
+            ketQua.innerHTML = "tiền phải trả là: "+chuDien * 3000 + "VNĐ";
+        }
+    }
+</script>
+</html>

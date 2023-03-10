@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính hoa hôdng</title>
+</head>
+<body>
+<h3>mức hoa hồng theo doanh thu</h3>
+<table border="1" cellspacing="0">
+    <tr>
+        <th width="150" align="center">doanh thu</th>
+        <th width="200" align="center">hoa hồng được nhận</th>
+    </tr>
+    <tr>
+        <td align="center">0 đến 1 tỷ</td>
+        <td align="center">0%</td>
+    </tr>
+    <tr>
+        <td align="center">1+ đến 3 tỷ</td>
+        <td align="center">5%</td>
+    </tr>
+    <tr>
+        <td align="center">3+ đến 5 tỷ</td>
+        <td align="center">10%</td>
+    </tr>
+    <tr>
+        <td align="center">5+ tỷ</td>
+        <td align="center">15%</td>
+    </tr>
+</table>
+<p>nhập doanh thu</p>
+<input type="number" id="tien"><label>Tỷ</label><br><br>
+<button type="button" onclick="cl()">tính hoa hồng</button>
+<p id="kq"></p>
+</body>
+<script>
+    function cl() {
+        let doanhThu = document.getElementById("tien").value * 1;
+        let ketQua = document.getElementById("kq");
+        if (doanhThu > 5) {
+            ketQua.innerHTML = "hoa hồng là: "+doanhThu * 0.15 + "tỷ";
+        } else if (doanhThu > 3) {
+            ketQua.innerHTML = "hoa hồng là: "+doanhThu * 0.1 + "tỷ";
+        } else if (doanhThu > 1) {
+            ketQua.innerHTML = "hoa hồng là: "+doanhThu * 0.05 + "tỷ";
+        } else {
+            ketQua.innerHTML = 0;
+        }
+    }
+</script>
+</html>
+Footer
+© 2023 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
+
+</body>
+</html>
