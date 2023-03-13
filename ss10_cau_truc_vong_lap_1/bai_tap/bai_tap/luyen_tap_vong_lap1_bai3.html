@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="kichChuot()">Hiển thị ra 20 số trong dãy fibonacci đầu tiên</button>
+<p id="daySo"></p>
+</body>
+<script>
+    function kichChuot() {
+        let box1 = 0;
+        let box2 = 1;
+        let ketQua;
+        for (let i = 1; i <= 20; i++) {
+            if (i == 1) {
+                ketQua = 0;
+            } else if (i == 2) {
+                ketQua = 1;
+            }else {
+                ketQua = box1 + box2;
+                box1 = box2;
+                box2 = ketQua;
+            }
+            console.log(ketQua);
+        }
+    }
+</script>
+</html>
+
