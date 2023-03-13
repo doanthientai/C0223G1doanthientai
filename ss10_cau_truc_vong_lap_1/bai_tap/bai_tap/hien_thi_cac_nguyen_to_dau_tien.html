@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>số nguyên tố</title>
+</head>
+<body>
+<p id="ketQua"></p>
+
+</body>
+<script>
+    let so = prompt("nhập số nghuyên tố cần hiển thị");
+    let demUoc = 0;
+    let demSo = 0;
+    let ketQua = ""
+
+
+    //Cách 1 dung vòng lặp for lồng nhau
+    /* for (let i = 2; i >0; i++) {   // số bắt đầu là 2, cho chạy vô hạn xét điều kiện dừng ở dưới
+         for (let j = 1; j <= i; j++) {
+             if (i % j == 0) {
+                 demUoc += 1;
+             }
+         }
+             if (demUoc == 2) {
+                 ketQua += i + "<br>";
+                 demSo += 1
+                 if (demSo == so) {
+                     break;        // xét dừng vòng lặp với break
+                 }
+             }
+         demUoc =0;              // đưa demUoc = 0 vào luồn chính
+     }
+     document.getElementById("ketQua").innerHTML = ketQua;
+     */
+
+    // Cách 2 dùng while lồng for
+    let i = 2;
+    while (demSo <= so) {
+        for (let j = 1; j <= i; j++) {
+            if (i % j == 0) {
+                demUoc++;
+            }
+        }
+        if (demUoc == 2) {
+            ketQua += i + "<br>";
+            demSo++
+        }
+        demUoc = 0;
+        i++;
+    }
+    document.getElementById("ketQua").innerHTML = ketQua;
+</script>
+</html>
