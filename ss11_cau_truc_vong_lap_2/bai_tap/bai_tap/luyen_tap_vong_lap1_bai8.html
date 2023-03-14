@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="GoChuot()">ledgoo</button>
+</body>
+</html>
+<script>
+    function GoChuot() {
+        let so = +prompt("đoán trong khoản từ 0 dến :  (3 lần đoán)");
+        let dapAn = Math.round(Math.random() * so);
+        console.log(dapAn);
+        for (let i = 1; i <= 3; i++) {
+            let soChon = +prompt("nhập số đoán");
+            if (soChon > dapAn) {
+                alert("đáp án bé hơn");
+            } else if (soChon < dapAn) {
+                alert("đáp án lơn hơn");
+            } else {
+                alert("bạn đã đoán đúng")
+                break;
+            }
+        }
+        alert("chúc mừng bạn đáp án đúng");
+    }
+</script>

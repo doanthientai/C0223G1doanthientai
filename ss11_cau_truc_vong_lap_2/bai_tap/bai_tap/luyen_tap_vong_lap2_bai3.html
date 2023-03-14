@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 id="in1"></h2>
+<br>
+<h2 id="in2"></h2>
+<br>
+<h2 id="in3"></h2>
+<br>
+<h2 id="in4"></h2>
+</body>
+</html>
+<script>
+    // -----------------
+
+    let hang;
+    let sao;
+    let in1 = "";
+    for (hang  = 1; hang<=5; hang++){
+        for (sao =1; sao<=hang; sao++){
+            in1 +="*"
+        }
+        in1 += "<br>"
+    }
+    document.getElementById("in1").innerHTML = in1;
+    // ----------------------------
+    let in2 = "";
+    for (hang  = 5; hang>=1; hang--){
+        for (sao =1; sao<=hang; sao++){
+            in2 +="*"
+        }
+        in2 += "<br>"
+    }
+    document.getElementById("in2").innerHTML = in2;// *<br>   **<br>  ***<br> ****<br>*****<br>
+    // --------------------------
+    let in3 = ""
+    for (let i =1; i <=5; i ++){
+        for (let j =1; j<=5; j++){
+            if (j <= 5-i){
+                in3 += "&nbsp; "
+            }else {
+                in3 +="*"
+            }
+        }
+        in3 += "<br>";
+    }
+    document.getElementById("in3").innerHTML = in3  ;
+    console.log(in3)
+    // --------------------------
+
+    let in4 = ""
+    for (let i =1; i <=5; i ++){
+        for (let j =5; j>=0; j--){
+            if (j <= 5-i){
+                in4 += "*"
+            }else {
+                in4 +="&nbsp; "
+            }
+        }
+        in4 += "<br>";
+    }
+    document.getElementById("in4").innerHTML = in4  ;
+    console.log(in4)
+</script>
+
+</body>
+</html>

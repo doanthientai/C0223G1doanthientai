@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 id="in4"></h2>
+</body>
+</html>
+<script>
+    let in4 = '';
+    let cot;
+    let hang;
+    for (cot = 1; cot <= 10; cot++) {
+        for (hang = 1; hang <= 30; hang++) {
+            if (cot == 1 || cot == 10 || hang == 1 || hang == 30) {
+                in4 += '*';
+            } else {
+                in4 += "&nbsp ";
+            }
+        }
+        in4 += "<br>";
+    }
+    document.getElementById("in4").innerHTML = in4;
+</script>
+</body>
+</html>
