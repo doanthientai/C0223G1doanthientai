@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function soNguyen(a, b) {
+        let okMen = a;
+        a = b;
+        b = okMen;
+        return [a, b];
+    }
+    let numBer1 = +prompt(" nhập số thứ nhất");
+    let numBer2 = +prompt("nhập số thứ hai");
+    [numBer1, numBer2] = soNguyen(numBer1, numBer2);
+    alert("số thứ nhất sau khi đảo là: "+numBer1);
+    alert("số thứ hai sau khi đảo là: "+numBer2);
+</script>
+</body>
+</html>

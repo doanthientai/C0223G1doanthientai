@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let tenSao=["Polaris", "Aldebaran", "Deneb"," Vega", "Altair", "Dubhe","Regulus"];
+    let hamSao=["Ursa Minor","Tarurus", "Cygnus", "Lyra"," Aquila", "Ursa Major","Leo"];
+    function kiemTra(nhapsao) {
+        for(let i=0;i<tenSao.length;i++){
+            if (tenSao[i]===nhapsao){
+                return "ham sao tương ứng" +hamSao[i];
+                break;
+            }
+        }
+return "không tìm thấy hàm sao tương ứng";
+    }
+    let dauVao=prompt("nhập tên ngoi sao:");
+    let dauRa=kiemTra(dauVao);
+    alert(dauRa);
+</script>
+</body>
+</html>

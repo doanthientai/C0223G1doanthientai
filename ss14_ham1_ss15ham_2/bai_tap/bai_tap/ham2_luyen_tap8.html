@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function daoMang(a) {
+        let ham1 = "";
+        let ham2= a.length -1;
+        for (let i=0; i< a.length/2; i++){
+           ham1 = a[i];
+            a[i] = a[ham2];
+            a[ham2] =ham1;
+            ham2--;
+        }
+        return a;
+    }
+    let arr = prompt("nhập nhần tử mảng ngăn cách bởi dấu phẩy").split(",");
+    daoMang(arr);
+    alert(arr);
+</script>
+</body>
+</html>
