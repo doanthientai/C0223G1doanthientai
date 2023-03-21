@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>mô tả hình chữ nhật</title>
+</head>
+<body>
+<canvas id="draw"></canvas>
+</body>
+</html>
+<script>
+    class HinhChuNhat {
+        constructor(chieuDai, chieuRong) {
+            this.chieuDai = chieuDai;
+            this.chieuRong = chieuRong;
+        }
+
+        tinhDienTich() {
+            return " diện tích hình chữ nhật là " + this.chieuDai * this.chieuRong + "cm2";
+        }
+
+        tinhChuvi() {
+            return " chu vi hình chữ nhật là " + (this.chieuRong + this.chieuDai) * 2 + " cm2";
+        }
+    }
+  let hinhChuNhat= new HinhChuNhat(20,30);
+    alert(hinhChuNhat.tinhDienTich());
+    alert(hinhChuNhat.tinhChuvi());
+</script>
+</body>
+</html>
