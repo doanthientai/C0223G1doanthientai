@@ -5,6 +5,27 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    function check(a, b) {
+        let count = 0;
+        let okMen = false;
+        for (let i = 0; i < a.length; i++) {
+            if (a[i] === b) {
+                count++;
+             okMen = true;
+            }
+        }
+        if (okMen) {
+            return count;
+        } else {
+            return -1;
+        }
+    }
 
+    let arr = prompt("nhập phần tử của mảng ngăn cách nhau bởi dấu phẩy").split(",");
+    let string = prompt("nhập ký tự kiểm tra ");
+
+    alert(check(arr, string));
+</script>
 </body>
 </html>
