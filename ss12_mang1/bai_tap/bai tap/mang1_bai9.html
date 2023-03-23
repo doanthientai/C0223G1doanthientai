@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let amenA = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let amenB = [11, 12, 14, 43, 45, 16, 22, 20, 19, 23];
+    let amenC = new Array(20);
+    for (let i = 0; i < amenA.length; i++) {
+        amenC[i] = amenA[i];
+    }
+    for (let i = 0; i < amenB.length; i++) {
+        amenC[i + 10] = amenB[i];
+    }
+    alert(amenC);
+
+</script>
+</body>
+</html>
